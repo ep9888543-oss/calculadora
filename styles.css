@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url("one-piece-personajes_4103x3004_xtrafondos.com.jpg") no-repeat center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Cartel tipo WANTED */
+.container {
+    background: rgba(0,0,0,0.8);
+    border: 4px solid #d4af37;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+
+    /* ✨ Animación entrada */
+    animation: aparecer 0.8s ease;
+}
+
+h2 {
+    color: #ffcc00;
+    text-shadow: 2px 2px black;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 2px solid #d4af37;
+    background: #2c2c3e;
+    color: white;
+}
+
+/* Botón eliminado */
+
+/* Tarjetas */
+.permiso-card {
+    background: #1f2a44;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+
+    animation: slideUp 0.4s ease;
+}
+
+/* Colores */
+.activo { color: #4caf50; }
+.inactivo { color: #999; }
+
+/* Explicación */
+.explicacion {
+    margin-top: 15px;
+    padding: 10px;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.7);
+
+    animation: aparecer 1s ease;
+}
+
+.explicacion strong {
+    color: #ffcc00;
+}
+
+/* Animaciones */
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora chmod - One Piece</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>🏴‍☠️ Calculadora chmod</h2>
+
+    <label>Permiso numérico</label>
+    <input 
+        type="text" 
+        id="permisoInput" 
+        placeholder="Ej: 755"
+        maxlength="3"
+        oninput="actualizarDesdeInput()"
+        onkeypress="return soloNumeros(event)"
+    >
+
+    <label>Usuario</label>
+    <select id="usuario" onchange="actualizarInput()"></select>
+
+    <label>Grupo</label>
+    <select id="grupo" onchange="actualizarInput()"></select>
+
+    <label>Otros</label>
+    <select id="otros" onchange="actualizarInput()"></select>
+
+    <div id="resultado" class="resultado"></div>
+
+    <div id="explicacionFinal" class="explicacion"></div>
+</div>
+
+<!-- 🔊 sonido -->
+<audio id="sonido" src="https://www.soundjay.com/buttons/sounds/button-09.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
