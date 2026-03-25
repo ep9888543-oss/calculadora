@@ -50,6 +50,22 @@ function explicarCompleto(u, g, o) {
     return html;
 }
 
+function limpiarCampos() {
+    // Limpiar input
+    document.getElementById("permisoInput").value = "";
+
+    // Resetear selects a la primera opción
+    document.getElementById("usuario").selectedIndex = 0;
+    document.getElementById("grupo").selectedIndex = 0;
+    document.getElementById("otros").selectedIndex = 0;
+
+    // Limpiar resultados
+    document.getElementById("resultado").innerHTML = "";
+    document.getElementById("explicacionFinal").innerHTML = "";
+
+    // Opcional: reproducir sonido
+    document.getElementById("sonido").play();
+}
 function actualizarVista(u, g, o) {
     resultado.innerHTML = `
         <p><strong>Permiso:</strong> ${u}${g}${o}</p>
